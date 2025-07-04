@@ -16,7 +16,7 @@ namespace Automation_Project
 
         public bool IsClaimPageLoaded()
         {
-            return Driver.driver.Url.Contains("/claim/viewAssignClaim");
+            return Driver.driver.Url.Contains("/claim");
         }
 
         public void SelectEmployeeWithHint()
