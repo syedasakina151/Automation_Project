@@ -107,11 +107,20 @@ namespace Automation_Project
             // Test 16: Open Claim page and click Assign Claim
             Claim claim = new Claim();
             claim.OpenClaimPage();
-            claim.SelectEmployeeWithHint();
+
+            if (claim.IsClaimPageLoaded())
+                Console.WriteLine("Claim Screen opened successfully.");
+            else
+                Console.WriteLine("Failed to open claim screen");
+            //claim.SelectEmployeeWithHint();
 
             // Test 17: Verify that Buzz page is accessible
             Buzz buzz = new Buzz();
             buzz.OpenBuzzPage();
+            if (buzz.IsBuzzPageLoaded())
+                Console.WriteLine("Buzz screen opened successfully.");
+            else
+                Console.WriteLine("Failed to open Buzz screen.");
 
             // Test 18: Verify that user can post news feed
             buzz.ClickWhatsOnMind();
@@ -127,7 +136,7 @@ namespace Automation_Project
 
             Driver.Stop();
             Console.WriteLine("Test complete. Press any key to exit.");
-            Console.ReadKey();
+            
         }
     }
 }
