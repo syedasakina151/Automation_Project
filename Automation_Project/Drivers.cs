@@ -20,7 +20,7 @@ namespace Automation_Project
             driver.Manage().Window.Maximize();
 
             // Implicit wait added
-            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(3);
+            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
         }
 
         public static void Stop()
